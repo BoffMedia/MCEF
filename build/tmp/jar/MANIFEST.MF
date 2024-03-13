@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
-Implementation-Title: mcef
-Implementation-Version: es.boffmedia
-Specification-Vendor: 
-Specification-Title: mcef
-Implementation-Timestamp: 2024-03-13T10:56:53+0100
+Implementation-Title: MCEF
+Implementation-Version: 2.2
+Specification-Vendor: mcef
+Specification-Title: mcefmod
+MixinConnector: com.nowandfuture.mod.mixin.MCEFConnector
 Specification-Version: 1
-Implementation-Vendor: 
+Implementation-Vendor: mcef
 

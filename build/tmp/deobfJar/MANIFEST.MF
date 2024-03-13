@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: MCEF
+Implementation-Version: 2.2
+Specification-Vendor: mcef
+Specification-Title: mcefmod
+Specification-Version: 1
+Implementation-Vendor: mcef
+

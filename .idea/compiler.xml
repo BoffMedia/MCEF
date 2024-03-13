@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.3/6cf746792770de8756bcde5781367e54eeccaa1a/mixin-0.8.3-processor.jar" />
+        </processorPath>
+        <module name="MCEF.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="mcef.api" target="8" />
+      <module name="mcef.main" target="8" />
+      <module name="mcef.test" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,3 @@
+es/boffmedia/mcef/MCEF.java
+ es.boffmedia.mcef.MCEF
+ es.boffmedia.mcef.MCEF$RegistryEvents

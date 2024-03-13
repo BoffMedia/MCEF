@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCEF.iml" filepath="$PROJECT_DIR$/.idea/modules/MCEF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCEF.api.iml" filepath="$PROJECT_DIR$/.idea/modules/MCEF.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCEF.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MCEF.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCEF.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MCEF.test.iml" />
     </modules>
   </component>
 </project>
