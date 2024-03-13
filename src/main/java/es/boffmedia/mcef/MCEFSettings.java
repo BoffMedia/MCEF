@@ -42,12 +42,14 @@ public class MCEFSettings {
     private String downloadMirror;
     private String userAgent;
     private boolean useCache;
+    private String javaCefCommitHash;
 
     public MCEFSettings() {
         skipDownload = false;
-        downloadMirror = "https://mcef-download.cinemamod.com";
+        downloadMirror = "https://api.boffmedia.es";
         userAgent = null;
         useCache = true;
+        javaCefCommitHash = "6e922629f1bf4af1cfb9ec54d7d9e8e237ed8d17";
     }
 
     public boolean isSkipDownload() {
@@ -65,6 +67,15 @@ public class MCEFSettings {
 
     public void setDownloadMirror(String downloadMirror) {
         this.downloadMirror = downloadMirror;
+        saveAsync();
+    }
+
+    public String getJavaCefCommitHash() {
+        return javaCefCommitHash;
+    }
+
+    public void setJavaCefCommitHash(String javaCefCommitHash) {
+        this.javaCefCommitHash = javaCefCommitHash;
         saveAsync();
     }
 

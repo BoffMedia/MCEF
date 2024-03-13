@@ -171,10 +171,10 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.version,
                 "Implementation-Vendor"   : "mcef",
-                "MixinConnector"          : "boffmcef.mixins.json"
+                "MixinConfigs"          : "mixins.mcef.json"
         ])
     }
-    rename 'mixin.refmap.json', 'boffmcef.mixin-refmap.json'
+    rename 'mixin.refmap.json', 'mixins.mcef.refmap.json'
 }
 
 mixin {

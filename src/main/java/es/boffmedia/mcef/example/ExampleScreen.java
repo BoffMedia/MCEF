@@ -21,6 +21,7 @@
 package es.boffmedia.mcef.example;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import es.boffmedia.mcef.MCEF;
 import es.boffmedia.mcef.MCEFBrowser;
@@ -91,20 +92,24 @@ public class ExampleScreen extends Screen {
     @Override
     public void render(MatrixStack matrixStack, int i, int j, float f) {
         super.render(matrixStack, i, j, f);
-        RenderSystem.disableDepthTest();
-
-        //minecraft.getTextureManager().bindTexture(browser.getRenderer().getTextureID());
+        GlStateManager.disableDepthTest();
+        GlStateManager.enableTexture();
 
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder buffer = tessellator.getBuffer();
-        buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_COLOR_TEX_LIGHTMAP);
+        RenderSystem.bindTexture(browser.getRenderer().getTextureID());
+        buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX_COLOR);
         buffer.pos(BROWSER_DRAW_OFFSET, height - BROWSER_DRAW_OFFSET, 0).tex(0.0f, 1.0f).color(255, 255, 255, 255).endVertex();
         buffer.pos(width - BROWSER_DRAW_OFFSET, height - BROWSER_DRAW_OFFSET, 0).tex(1.0f, 1.0f).color(255, 255, 255, 255).endVertex();
         buffer.pos(width - BROWSER_DRAW_OFFSET, BROWSER_DRAW_OFFSET, 0).tex(1.0f, 0.0f).color(255, 255, 255, 255).endVertex();
         buffer.pos(BROWSER_DRAW_OFFSET, BROWSER_DRAW_OFFSET, 0).tex(0.0f, 0.0f).color(255, 255, 255, 255).endVertex();
         tessellator.draw();
-        minecraft.getTextureManager().bindTexture(AtlasTexture.LOCATION_BLOCKS_TEXTURE);
-        RenderSystem.enableDepthTest();
+        RenderSystem.bindTexture(0);
+
+        GlStateManager.enableDepthTest();
+        matrixStack.pop();
+        RenderSystem.enableCull();
+
     }
 
     @Override

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCEF.api.iml" filepath="$PROJECT_DIR$/.idea/modules/MCEF.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCEF.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MCEF.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCEF.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MCEF.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/es.boffmedia.mcef.MCEF.api.iml" filepath="$PROJECT_DIR$/.idea/modules/es.boffmedia.mcef.MCEF.api.iml" />
     </modules>
   </component>
 </project>

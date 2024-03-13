@@ -11,5 +11,5 @@
   "injectors": {
     "defaultRequire": 1
   },
-  "refmap": "boffmcef.mixin-refmap.json"
+  "refmap": "mixins.mcef.refmap.json"
 }

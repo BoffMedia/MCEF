@@ -38,8 +38,8 @@ import java.net.URL;
  * Email ds58@mailbox.org for any questions or concerns regarding the file hosting.
  */
 public class MCEFDownloader {
-    private static final String JAVA_CEF_DOWNLOAD_URL = "${host}/java-cef-builds/${java-cef-commit}/${platform}.tar.gz";
-    private static final String JAVA_CEF_CHECKSUM_DOWNLOAD_URL = "${host}/java-cef-builds/${java-cef-commit}/${platform}.tar.gz.sha256";
+    private static final String JAVA_CEF_DOWNLOAD_URL = "${host}/jcef/${java-cef-commit}/${platform}.tar.gz";
+    private static final String JAVA_CEF_CHECKSUM_DOWNLOAD_URL = "${host}/jcef/${java-cef-commit}/${platform}.tar.gz.sha256";
 
     private final String host;
     private final String javaCefCommitHash;
@@ -64,6 +64,16 @@ public class MCEFDownloader {
     }
 
     private String formatURL(String url) {
+        System.out.println("MCEFDownloader.formatURL: " + url);
+        System.out.println("host: " + host);
+        System.out.println("javaCefCommitHash: " + javaCefCommitHash);
+        System.out.println("platform: " + platform.getNormalizedName());
+
+        System.out.println("MCEFDownloader.formatURL: " + url
+                .replace("${host}", host)
+                .replace("${java-cef-commit}", javaCefCommitHash)
+                .replace("${platform}", platform.getNormalizedName()));
+
         return url
                 .replace("${host}", host)
                 .replace("${java-cef-commit}", javaCefCommitHash)
@@ -119,6 +129,8 @@ public class MCEFDownloader {
 
             URL url = new URL(urlString);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537");
+            System.out.println("MCEFDownloader.downloadFile: " + urlConnection.getResponseCode());
 
             if (urlConnection.getResponseCode() != 200) {
                 throw new IOException();
@@ -126,13 +138,16 @@ public class MCEFDownloader {
 
             int fileSize = urlConnection.getContentLength();
 
-            BufferedInputStream inputStream = new BufferedInputStream(url.openStream());
+            BufferedInputStream inputStream = new BufferedInputStream(urlConnection.getInputStream());
             FileOutputStream outputStream = new FileOutputStream(outputFile);
+
+
 
             byte[] buffer = new byte[2048];
             int count;
             int readBytes = 0;
             while ((count = inputStream.read(buffer)) != -1) {
+                System.out.println("MCEFDownloader.downloadFile: " + count);
                 outputStream.write(buffer, 0, count);
                 readBytes += count;
                 float percentComplete = (float) readBytes / fileSize;

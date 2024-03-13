@@ -47,10 +47,6 @@ import java.io.IOException;
  */
 @Mixin(ResourcePackList.class)
 public class CefDownloadMixin {
-    static {
-
-
-    }
     @Unique
     private static void setupLibraryPath() throws IOException {
         final File mcefLibrariesDir;
@@ -72,7 +68,7 @@ public class CefDownloadMixin {
     }
 
     @Inject(at = @At("RETURN"), method = "<init>")
-    private static void sinit(CallbackInfo callbackInfo) {
+    private void sinit(CallbackInfo callbackInfo) {
         try {
             setupLibraryPath();
         } catch (IOException e) {
@@ -92,7 +88,7 @@ public class CefDownloadMixin {
             MCEF.getLogger().info("java-cef commit: " + javaCefCommit);
 
             MCEFSettings settings = MCEF.getSettings();
-            MCEFDownloader downloader = new MCEFDownloader(settings.getDownloadMirror(), javaCefCommit, MCEFPlatform.getPlatform());
+            MCEFDownloader downloader = new MCEFDownloader(settings.getDownloadMirror(), settings.getJavaCefCommitHash(), MCEFPlatform.getPlatform());
 
             boolean downloadJcefBuild;
 
