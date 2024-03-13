@@ -1,4 +1,4 @@
-Args: "--in-jar", "D:\Programacion\BoffMedia\MCEF\build\libs\mcef-1.16.5-2.2.jar", "--out-jar", "D:\Programacion\BoffMedia\MCEF\build\reobfJar\output.jar", "--srg-in", "D:\Programacion\BoffMedia\MCEF\build\createMcpToSrg\output.tsrg", "--live"
+Args: "--in-jar", "D:\Programacion\BoffMedia\MCEF\build\libs\mcef-1.16.5-2.2.jar", "--out-jar", "D:\Programacion\BoffMedia\MCEF\build\reobfJar\output.jar", "--srg-in", "D:\Programacion\BoffMedia\MCEF\build\createMcpToSrg\output.tsrg", "--srg-in", "D:\Programacion\BoffMedia\MCEF\build\tmp\compileJava\compileJava-mappings.tsrg", "--live"
 Classpath: C:\Users\luisc\.gradle\caches\forge_gradle\maven_downloader\net\md-5\SpecialSource\1.9.0\SpecialSource-1.9.0-shaded.jar
 Classpath: C:\Users\luisc\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5\forge-1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5-recomp.jar
 Classpath: C:\Users\luisc\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5\forge-1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5-launcher.jar
@@ -80,7 +80,9 @@ Loading mappings... 20%
 Loading mappings... 30%
 Loading mappings... 40%
 Loading mappings... 50%
-0 packages, 5447 classes, 21481 fields, 38359 methods
+Loading mappings... 50%
+Loading mappings... 100%
+0 packages, 5447 classes, 21481 fields, 38360 methods
 Remapping final jar
 Remapping jar...  0%
 Remapping jar... 10%

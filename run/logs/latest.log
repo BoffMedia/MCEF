@@ -1,0 +1,35 @@
+[13mar2024 13:44:16.761] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.1.0, --version, MOD_DEV, --assetIndex, 1.16, --assetsDir, C:\Users\luisc\.gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[13mar2024 13:44:16.763] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_382 by Amazon.com Inc.
+[13mar2024 13:44:16.957] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[13mar2024 13:44:16.984] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.3 Source=file:/C:/Users/luisc/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.3/5b08b203d5c601e2393be5cf9b4d39c26d12eb5f/mixin-0.8.3.jar Service=ModLauncher Env=CLIENT
+[13mar2024 13:44:17.013] [main/WARN] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Configuration file D:\Programacion\BoffMedia\MCEF\run\config\fml.toml is not correct. Correcting
+[13mar2024 13:44:17.017] [main/WARN] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Incorrect key [defaultConfigPath] was corrected from null to defaultconfigs
+[13mar2024 13:44:17.893] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: com.electronwill.nightconfig.core.io.ParsingException: Invalid bare key: ${mod_id}
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.toml.TableParser.parseKey(TableParser.java:175)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.toml.TableParser.parseTableName(TableParser.java:111)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.toml.TomlParser.parse(TomlParser.java:51)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.toml.TomlParser.parse(TomlParser.java:37)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:113)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:219)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:202)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at com.electronwill.nightconfig.core.file.WriteAsyncFileConfig.load(WriteAsyncFileConfig.java:138)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.fml.loading.moddiscovery.ModFileParser.modsTomlParser(ModFileParser.java:59)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.fml.loading.moddiscovery.ModFileParser.readModList(ModFileParser.java:46)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.fml.loading.moddiscovery.ModFile.identifyMods(ModFile.java:113)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer.discoverMods(ModDiscoverer.java:121)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.fml.loading.FMLLoader.beginModScan(FMLLoader.java:216)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.fml.loading.FMLServiceProvider.runScan(FMLServiceProvider.java:107)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.TransformationServiceDecorator.runScan(TransformationServiceDecorator.java:114)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.TransformationServicesHandler.lambda$runScanningTransformationServices$8(TransformationServicesHandler.java:115)
+[13mar2024 13:44:17.894] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:269)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at java.util.HashMap$ValueSpliterator.forEachRemaining(HashMap.java:1652)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.TransformationServicesHandler.runScanningTransformationServices(TransformationServicesHandler.java:116)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.TransformationServicesHandler.initializeTransformationServices(TransformationServicesHandler.java:63)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:76)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66)
+[13mar2024 13:44:17.895] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105)

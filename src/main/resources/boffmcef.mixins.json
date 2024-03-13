@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "es.boffmedia.mcef.mixins",
+  "mixinPriority": 1000,
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "CefInitMixin",
+    "CefDownloadMixin",
+    "CefRenderUpdateMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "boffmcef.mixin-refmap.json"
+}

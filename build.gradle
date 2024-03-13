@@ -51,6 +51,7 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
+            arg("-mixin.config=boffmcef.mixins.json")
 
             property 'forge.logging.markers', 'REGISTRIES'
 
@@ -170,10 +171,10 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.version,
                 "Implementation-Vendor"   : "mcef",
-                "MixinConnector"          : "com.nowandfuture.mod.mixin.MCEFConnector"
+                "MixinConnector"          : "boffmcef.mixins.json"
         ])
     }
-
+    rename 'mixin.refmap.json', 'boffmcef.mixin-refmap.json'
 }
 
 mixin {
