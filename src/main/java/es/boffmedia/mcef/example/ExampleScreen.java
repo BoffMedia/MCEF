@@ -48,7 +48,7 @@ public class ExampleScreen extends Screen {
     protected void init() {
         super.init();
         if (browser == null) {
-            String url = "https://www.google.com";
+            String url = "https://codesandbox.io/p/sandbox/dndkit-sortable-image-grid-py6ve?file=%2Fsrc%2FGrid.jsx";
             boolean transparent = true;
             browser = MCEF.createBrowser(url, transparent);
             resizeBrowser();
@@ -95,14 +95,15 @@ public class ExampleScreen extends Screen {
         GlStateManager.disableDepthTest();
         GlStateManager.enableTexture();
 
+
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder buffer = tessellator.getBuffer();
         RenderSystem.bindTexture(browser.getRenderer().getTextureID());
-        buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX_COLOR);
-        buffer.pos(BROWSER_DRAW_OFFSET, height - BROWSER_DRAW_OFFSET, 0).tex(0.0f, 1.0f).color(255, 255, 255, 255).endVertex();
-        buffer.pos(width - BROWSER_DRAW_OFFSET, height - BROWSER_DRAW_OFFSET, 0).tex(1.0f, 1.0f).color(255, 255, 255, 255).endVertex();
-        buffer.pos(width - BROWSER_DRAW_OFFSET, BROWSER_DRAW_OFFSET, 0).tex(1.0f, 0.0f).color(255, 255, 255, 255).endVertex();
-        buffer.pos(BROWSER_DRAW_OFFSET, BROWSER_DRAW_OFFSET, 0).tex(0.0f, 0.0f).color(255, 255, 255, 255).endVertex();
+        buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+        buffer.pos(BROWSER_DRAW_OFFSET, height - BROWSER_DRAW_OFFSET, 0).tex(0.0f, 1.0f).endVertex();
+        buffer.pos(width - BROWSER_DRAW_OFFSET, height - BROWSER_DRAW_OFFSET, 0).tex(1.0f, 1.0f).endVertex();
+        buffer.pos(width - BROWSER_DRAW_OFFSET, BROWSER_DRAW_OFFSET, 0).tex(1.0f, 0.0f).endVertex();
+        buffer.pos(BROWSER_DRAW_OFFSET, BROWSER_DRAW_OFFSET, 0).tex(0.0f, 0.0f).endVertex();
         tessellator.draw();
         RenderSystem.bindTexture(0);
 
