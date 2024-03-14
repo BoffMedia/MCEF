@@ -89,6 +89,8 @@ public final class MCEF {
                     (browser, frame, url, request) -> new ModScheme(request.getURL())
             );
 
+
+
             // Handle shutdown events, macOS is special
             // These are important; the jcef process will linger around if not done
             MCEFPlatform platform = MCEFPlatform.getPlatform();
