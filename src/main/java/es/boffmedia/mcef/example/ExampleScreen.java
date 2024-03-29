@@ -48,7 +48,7 @@ public class ExampleScreen extends Screen {
     protected void init() {
         super.init();
         if (browser == null) {
-            String url = "https://codesandbox.io/p/sandbox/dndkit-sortable-image-grid-py6ve?file=%2Fsrc%2FGrid.jsx";
+            String url = "http://localhost:3000/smartrotom";
             boolean transparent = true;
             browser = MCEF.createBrowser(url, transparent);
             resizeBrowser();

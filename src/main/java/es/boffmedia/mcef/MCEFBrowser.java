@@ -440,4 +440,12 @@ public class MCEFBrowser extends CefBrowserOsr {
             GLFW.glfwSetCursor(Minecraft.getInstance().getMainWindow().getHandle(), MCEF.getGLFWCursorHandle(cursorType));
         }
     }
+
+    @Override
+    public void executeJavaScript(String code, String url, int line) {
+        System.out.println("Executing JavaScript: " + code);
+        System.out.println("URL: " + url);
+        System.out.println("Line: " + line);
+        super.executeJavaScript(code, url, line);
+    }
 }
